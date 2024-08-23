@@ -22,4 +22,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
             cb.depositar(1000);
             assertEquals(1000, cb.getSaldo());
         }
+
+        @Test
+        public void testeDepositarZero(){
+            cb.depositar(0);
+            assertEquals(0.0,cb.getSaldo());
+        }
 }

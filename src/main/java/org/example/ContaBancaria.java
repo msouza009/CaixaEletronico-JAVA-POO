@@ -32,8 +32,14 @@ public class ContaBancaria {
         }else
             System.out.println("DEPÓSITO INVÁLIDO.");
     }
-    public void sacar() {
-
+    public void sacar(double valorSaque) {
+        if(valorSaque > 0 && valorSaque <= saldo){
+            saldo = saldo - valorSaque;
+            System.out.println("Saque efetuado. Saldo atual = "+ saldo);
+        } else {
+            System.out.println("Valor de saque incorreto.");
+        }
     }
+
 
 }
