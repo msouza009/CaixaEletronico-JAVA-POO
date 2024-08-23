@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
     public class ContaBancariaTest {
-        ContaBancaria cb = new ContaBancaria("Joao",123,0);
+        ContaBancaria cb = new ContaBancaria("Matheus",123,0);
         @Test
         public void testeGetTitular(){
             assertEquals("Matheus",cb.getTitular());
@@ -15,5 +15,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
         public void testeDepositar(){
             cb.depositar(1.2);
             assertEquals(1.2, cb.getSaldo());
+        }
+
+        @Test
+        public void testeDepositar1000(){
+            cb.depositar(1000);
+            assertEquals(1000, cb.getSaldo());
         }
 }
