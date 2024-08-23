@@ -6,10 +6,10 @@ public class ContaBancaria {
     private int numeroConta;
     private double saldo;
 
-    public ContaBancaria(String titular, int numeroConta, double saldo) {
+    public ContaBancaria(String titular, int numeroConta) {
         this.titular = titular;
         this.numeroConta = numeroConta;
-        this.saldo = saldo;
+        this.saldo = 0.0;
     }
 
     public String getTitular() {
